@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions</title>
+    <link href='css/style.css' rel='stylesheet'>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">
+      <h2>Haytham</h2>
+      <p class="social">@haytham</p>
+    </div>
+  </div>
+
+
+  <script>
+
+
+const input = 'potato'
+if(input === 'potato'){
+  console.log("Yay you are allow to enter");
+} else {
+  console.log("not a potato");
+}
+
+  const box = document.querySelector('.box');
+  box.addEventListener('click', function() {
+    let first = 'opening';
+    let second = 'open';
+
+    if(this.classList.contains(first)) {
+      [first, second] = [second, first];
+    }
+
+    this.classList.toggle(first);
+    setTimeout(() => {
+      console.log(this);
+      this.classList.toggle(second);
+    }, 500);
+  });
+
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>gimo</title>
+</head>
+
+<body>
+  <style>
+    .button {font-size: 50px;}
+    .on {background: #ffc600;}
+    .off {background: white;}
+
+
+  </style>
+
+  <button id="pushy">push me</button>
+
+  <script>
+  const button = document.querySelector('#pushy');
+  button.addEventListener('click', function() {
+    console.log(this);
+    this.classList.remove('off');
+    this.classList.add('on');
+
+    setTimeout(() => {
+      this.classList.remove('on');
+      this.classList.add('off')
+    }, 100);
+})
+
+  </script>
+</body>
+
+</html>
